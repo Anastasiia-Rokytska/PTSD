@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <title>PTSD</title>
+</head>
+<body>
+<div class="container justify-content-center">
+    <h1>Пройдіть опитування</h1>
+    <form method="post" action="result/">
+        {% csrf_token %}
+
+        <br>
+        <h3>1. Вкажіть ваш вік:<br> <input name="age" type="text"/></h3><br>
+        <h3>2. Чи перебуваєте ви в постійному нервовому збудженні :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="nervous">
+            <label class="form-check-label" >
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="nervous" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>3. Чи в вас є панічні атаки :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="panic">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="panic" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>4. Чи буває таке, що в вас часте дихання, без причин на це :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="breathing_rapidly">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="breathing.rapidly" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>5. Чи є в вас підвищене потовиділення :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="sweating">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="sweating" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>6. Чи є в вас проблеми з концентрацією :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="trouble_in_con">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="trouble_in_con" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>7. Чи є в вас проблеми зі сном :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="trouble_in_sleep">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="trouble_in_sleep" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>3. Чи в вас є панічні атаки :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="panic">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="panic" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <h3>3. Чи в вас є панічні атаки :</h3><br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" value="1" name="panic">
+            <label class="form-check-label">
+                так
+            </label>
+        </div>
+        <br>
+        <div class="form-check">
+            <input class="form-check-input" type="radio" name="panic" value="0" >
+            <label class="form-check-label" >
+                ні
+            </label>
+        </div>
+        <br>
+        <input type="submit" value="Send"/>
+    </form>
+</div>
+</body>
+</html>
